@@ -1,0 +1,9 @@
+<div class="topic-contaier">
+    <div class="card">
+        <h4 (click)=" data.id = !data.id" class="mt-3 topic-list-items" *ngFor="let data of topicsArray">
+            #{{data.name}}
+            <span *ngIf=data.id class="follow mr-1">FOLLOW</span>
+            <span *ngIf=!data.id class="follow mr-1">FOLLOWING</span>
+        </h4>
+    </div>
+</div>

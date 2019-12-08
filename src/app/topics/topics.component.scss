@@ -1,0 +1,22 @@
+.topic-contaier {
+  width: 300px !important;
+  height: 70vh;
+}
+.card {
+  overflow-x: hidden;
+  max-height: 600px !important;
+}
+.topic-list-items:hover {
+  background-color: rgb(228, 228, 228);
+  cursor: pointer;
+  .follow {
+    opacity: 1;
+  }
+}
+.follow {
+  opacity: 0;
+  padding: 6px;
+  float: right;
+  background-color: rgb(90, 235, 235);
+  font-weight: 600;
+}

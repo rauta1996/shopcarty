@@ -1,0 +1,22 @@
+<div class="feed-container">
+    <div class="card" *ngFor="let data of feedsArray">
+        <div class="card-body">
+            <h4 class="card-title" (click)="navigate()">{{data.heading}}</h4>
+            <h4 class="btn btn-link userName">{{data.name}}</h4>
+            <p class="card-text " *ngFor="let has of data.hastags">
+                <span>#{{has}}</span>
+            </p>
+            <div class="d-flex justify-content-between">
+                <div>
+                    <span (click)="like(data.id)">like({{data.likecount}})</span>
+                </div>
+                <div>
+                    <button (click)="data.isSaved= !data.isSaved" *ngIf="data.isSaved"
+                        class="btn btn-primary">saved</button>
+                    <button (click)="data.isSaved= !data.isSaved" *ngIf="!data.isSaved"
+                        class="btn btn-primary">save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
