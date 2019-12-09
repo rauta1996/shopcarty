@@ -3,9 +3,10 @@
         <div class="card-body">
             <h4 class="card-title" (click)="navigate()">{{data.heading}}</h4>
             <h4 class="btn btn-link userName">{{data.name}}</h4>
-            <p class="card-text " *ngFor="let has of data.hastags">
-                <span>#{{has}}</span>
-            </p>
+            <div class="tags " *ngFor="let has of data.hastags">
+                <a class="tag">#javascript</a>
+            </div>
+            
             <div class="d-flex justify-content-between">
                 <div>
                     <span (click)="like(data.id)">like({{data.likecount}})</span>
